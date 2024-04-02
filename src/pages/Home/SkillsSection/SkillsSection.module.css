@@ -1,0 +1,57 @@
+.skillsSection {
+  padding: 128px 16px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.container > h1 {
+  font-size: 26px;
+  color: white;
+  font-weight: 600;
+  margin: 0 16px;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.container > h2 {
+  font-size: 24px;
+  color: #ABA9B0;
+  font-weight: 600;
+  margin: 0 16px;
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+}
+
+.smallGrid {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.smallGrid>span {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-size: 24px;
+  border-radius: 100px;
+  font-weight: 500;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1) inset;
+  background-color: #19191C;
+}
