@@ -10,7 +10,7 @@
   cursor: pointer;
   transition: all 0.2s ease;
   padding-bottom: 16px;
-  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1) inset;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05) inset, 0 .5px .5px #ffffff29 inset,0 0 0 1px #000000c4,0 41px 17px #00000008,0 23px 14px #0000001a,0 10px 10px #0000002b,0 3px 6px #00000030;
 }
 
 .projectTile:hover {
@@ -34,7 +34,6 @@
 
 .image img {
   object-fit: cover;
-  object-position: top left;
   height: 100%;
   width: 100%;
   border: 0 none;
@@ -72,7 +71,7 @@
   padding: 2px 8px;
   border-radius: 100px;
   font-weight: 500;
-  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1) inset;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05) inset, 0 .5px .5px #ffffff29 inset,0 0 0 1px #000000c4,0 41px 17px #00000008,0 23px 14px #0000001a,0 10px 10px #0000002b,0 3px 6px #00000030;
 }
 
 .description {

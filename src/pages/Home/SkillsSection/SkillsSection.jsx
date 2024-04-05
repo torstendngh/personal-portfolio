@@ -6,14 +6,17 @@ const SkillsSection = () => {
   return (
     <section className={styles.skillsSection}>
       <div className={styles.container}>
-        <h1>
+        <h1 id="skills">
           <Icon icon={"skills"} />
           Skills
         </h1>
         <div className={styles.grid}>
-          <SkillTile title={"React"} color={"#0a6ed1"} icon={"react"} description={"I have made many hundreds of projects with ReactJS and have 5 years of experiance with it."}/>
-          <SkillTile title={"JS/HTML/CSS"} color={"#f7df1e"} icon={"javascript"} description={"JavaScript is the language I use the most in my projects, I am also learning TypeScript."}/>
-          <SkillTile title={"Figma"} color={"#e34c26"} icon={"figma"} description={"I use Figma for all my designs and prototyping"}/>
+          <SkillTile title={"React"} icon={"react"}/>
+          <SkillTile title={"JavaScript"} icon={"javascript"}/>
+          <SkillTile title={"TypeScript"} icon={"typescript"}/>
+          <SkillTile title={"Figma"} icon={"figma"}/>
+          <SkillTile title={"CSS"} icon={"css"}/>
+          <SkillTile title={"HTML"} icon={"html"}/>
         </div>
         <h2>Development</h2>
         <div className={styles.smallGrid}>
@@ -28,6 +31,8 @@ const SkillsSection = () => {
           <span>Vite</span>
           <span>Git</span>
           <span>ElectronJS</span>
+          <span>JSON</span>
+          <span>jQuery</span>
           <span>Node.js</span>
           <span>React Router</span>
           <span>Express</span>
@@ -38,11 +43,13 @@ const SkillsSection = () => {
           <span>Thirdweb</span>
           <span>Svelte</span>
           <span>SvelteKit</span>
+          <span>Solidity</span>
         </div>
         <h2>Design</h2>
         <div className={styles.smallGrid}>
           <span>Figma</span>
           <span>Adobe XD</span>
+          <span>Affinity Designer</span>
         </div>
         <h2>Software</h2>
         <div className={styles.smallGrid}>
@@ -51,6 +58,23 @@ const SkillsSection = () => {
           <span>Jira</span>
           <span>Android Studio</span>
           <span>Slack</span>
+        </div>
+        <h2>Skills Acquired in a Business Informatics Degree</h2>
+        <div className={styles.smallGrid}>
+          <span>Java Programming, Object-Oriented Programming (OOP)</span>
+          <span>IT Project Management (Agile, Kanban, Scrum, User Stories)</span>
+          <span>Software Engineering</span>
+          <span>IT Risk Management</span>
+          <span>Data Communication</span>
+          <span>Databases (SQL and Modeling)</span>
+          <span>Marketing & Sales</span>
+          <span>Innovation Management & Entrepreneurship</span>
+          <span>Business and Economics (BWL & VWL)</span>
+          <span>IT Organization & IT Controlling</span>
+          <span>Blockchain & Smart Contracts (Solidity)</span>
+          <span>Socioinformatics</span>
+          <span>Test-Driven Development</span>
+          <span>Behavior-Driven Development</span>
         </div>
       </div>
     </section>

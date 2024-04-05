@@ -1,10 +1,10 @@
-import styles from './Navbar.module.css';
-import profilePicture from '../../assets/images/profilePicture.jpeg';
-import Icon from '../Icon/Icon';
-import { useEffect, useState } from 'react';
+import styles from "./Navbar.module.css";
+import profilePicture from "../../assets/images/profilePicture.jpeg";
+import Icon from "../Icon/Icon";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
-
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -15,31 +15,62 @@ const Navbar = () => {
     };
 
     // Add scroll event listener when component mounts
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     // Clean up function to remove event listener when component unmounts
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []); // Empty dependency array means this effect runs once on mount
 
   return (
     <div className={styles.container}>
-      <nav className={`${styles.navbar} ${scrolled ? styles.navbarBackground : null}`}>
-        <div className={styles.leftContainer}>
-          <img className={styles.profilePicture} src={profilePicture} alt="" />
-          {
-            scrolled &&
-            <span className={styles.name}>@torstendngh</span>
-          }
-        </div>
-        <div className={styles.rightContainer}>
-          <button className={styles.button}><Icon icon={"x"} /></button>
-          <button className={styles.button}><Icon icon={"githubThin"} /></button>
-          <button className={styles.button}><Icon icon={"linkedIn"} /></button>
-          <button className={styles.primaryButton}>
-            Contact
-            <Icon icon={"send"} />
-          </button>
-        </div>
+      <nav
+        className={`${styles.navbar} ${
+          scrolled ? styles.navbarBackground : null
+        }`}
+      >
+        <AnimatePresence>
+          <div className={styles.leftContainer}>
+            {scrolled && (
+              <>
+                <motion.img
+                  className={styles.profilePicture}
+                  src={profilePicture}
+                  alt=""
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                />
+                <motion.span
+                  className={styles.name}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                >
+                  @torstendngh
+                </motion.span>
+              </>
+            )}
+          </div>
+          <div className={styles.centerContainer}>
+              <a href="#projects">Projects</a>
+              <a href="#skills">Skills</a>
+              <a href="#about">About</a>
+          </div>
+          <div className={styles.rightContainer}>
+            <button className={styles.button}>
+              <Icon icon={"x"} />
+            </button>
+            <button className={styles.button}>
+              <Icon icon={"githubThin"} />
+            </button>
+            <button className={styles.button}>
+              <Icon icon={"linkedIn"} />
+            </button>
+            <button className={styles.primaryButton}>
+              <span>Contact</span>
+            </button>
+          </div>
+        </AnimatePresence>
       </nav>
     </div>
   );

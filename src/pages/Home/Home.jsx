@@ -4,6 +4,7 @@ import styles from "./Home.module.css";
 import ProjectsSection from "./ProjectsSection/ProjectsSection";
 import SkillsSection from "./SkillsSection/SkillsSection";
 import { motion } from "framer-motion";
+import profilePictureImage from "../../assets/images/profilePicture.jpeg";
 
 const Home = () => {
   return (
@@ -11,30 +12,41 @@ const Home = () => {
       <Navbar />
       <section className={styles.heroSection}>
         <div className={styles.heroContainer}>
-          <h2>@torstendngh</h2>
+          <img
+            className={styles.profilePicture}
+            src={profilePictureImage}
+            alt=""
+          />
+          <h2>Developer & Creative</h2>
           <motion.h1
             initial={{ opacity: 0, x: -100, filter: "blur(16px)" }}
             whileInView={{
-              opacity: 1, x: 0, filter: "blur(0px)", transition: {
+              opacity: 1,
+              x: 0,
+              filter: "blur(0px)",
+              transition: {
                 type: "spring",
                 bounce: 0.4,
                 duration: 0.8,
-                delay: 0.1
-              }
+                delay: 0.1,
+              },
             }}
           >
-            Developer &<br />Creative
+            @torstendngh
           </motion.h1>
           <div className={styles.tagContainer}>
             <motion.div
               initial={{ opacity: 0, y: 16, filter: "blur(16px)" }}
               whileInView={{
-                opacity: 1, y: 0, filter: "blur(0px)", transition: {
+                opacity: 1,
+                y: 0,
+                filter: "blur(0px)",
+                transition: {
                   type: "spring",
                   bounce: 0.4,
                   duration: 0.8,
-                  delay: 0.2
-                }
+                  delay: 0.2,
+                },
               }}
             >
               <Icon icon={"language"} />
@@ -43,12 +55,15 @@ const Home = () => {
             <motion.div
               initial={{ opacity: 0, y: 16, filter: "blur(16px)" }}
               whileInView={{
-                opacity: 1, y: 0, filter: "blur(0px)", transition: {
+                opacity: 1,
+                y: 0,
+                filter: "blur(0px)",
+                transition: {
                   type: "spring",
                   bounce: 0.4,
                   duration: 0.8,
-                  delay: 0.3
-                }
+                  delay: 0.3,
+                },
               }}
             >
               <Icon icon={"location"} />
@@ -57,18 +72,24 @@ const Home = () => {
             <motion.div
               initial={{ opacity: 0, y: 16, filter: "blur(16px)" }}
               whileInView={{
-                opacity: 1, y: 0, filter: "blur(0px)", transition: {
+                opacity: 1,
+                y: 0,
+                filter: "blur(0px)",
+                transition: {
                   type: "spring",
                   bounce: 0.4,
                   duration: 0.8,
-                  delay: 0.4
-                }
-              }}>
-              <Icon icon={"github"} />
-              torstendngh
+                  delay: 0.4,
+                },
+              }}
+            >
+              <Icon icon={"send"} />
+              torstendngh@gmail.com
             </motion.div>
           </div>
-          <span>I design and develop apps and web apps that focus on the user experience. In my opinion minimalism is key, for the user and developer experience.</span>
+          <button className={styles.primaryButton}>
+            <span>Contact Me</span>
+          </button>
         </div>
       </section>
       <ProjectsSection />

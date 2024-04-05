@@ -1,16 +1,15 @@
-import styles from './SkillTile.module.css'
-import Icon from '../../../../components/Icon/Icon.jsx'
+import styles from "./SkillTile.module.css";
+import Icon from "../../../../components/Icon/Icon.jsx";
 
-const SkillTile = ({icon, title, description, color}) => {
+const SkillTile = ({ icon, title}) => {
   return (
     <div className={styles.tile}>
-      <div className={styles.icon} style={{color: color}}>
-        <Icon icon={icon}/>
+      <div className={styles.icon}>
+        <Icon icon={icon} />
       </div>
-        <h2>{title}</h2>
-      {/* <span>{description}</span> */}
+      <h2>{title}</h2>
     </div>
-  )
-}
+  );
+};
 
-export default SkillTile
+export default SkillTile;

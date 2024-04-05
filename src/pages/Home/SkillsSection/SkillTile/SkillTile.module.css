@@ -9,7 +9,7 @@
   border-radius: 16px;
   overflow: hidden;
   flex-shrink: 0;
-  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1) inset;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05) inset, 0 .5px .5px #ffffff29 inset,0 0 0 1px #000000c4,0 41px 17px #00000008,0 23px 14px #0000001a,0 10px 10px #0000002b,0 3px 6px #00000030;
   gap: 16px;
 }
 
@@ -20,14 +20,9 @@
 .tile h2 {
   font-size: 26px;
   font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.tile span {
-  font-size: 16px;
-  font-weight: 400;
-  color: #ABA9B0;
-  hyphens: auto; 
+  background: linear-gradient(0deg, rgb(178, 175, 180) 30%, rgba(230,227,232,1) 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .icon {
