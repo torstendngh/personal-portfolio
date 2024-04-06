@@ -2,7 +2,7 @@
   padding: 16px;
   display: flex;
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
   z-index: 999;
@@ -19,13 +19,13 @@
   padding: 0;
   transition: all 0.2s ease;
   backdrop-filter: blur(32px);
-  background: linear-gradient(to left, #0c0c0cd1, transparent 10%, transparent 90%, #0c0c0cd1);
   opacity: 0;
 }
 
 .navbarBackground {
-  box-shadow: 0 .5px .5px #ffffff29 inset,0 0 0 1px #000000c4,0 41px 17px #00000008,0 23px 14px #0000001a,0 10px 10px #0000002b,0 3px 6px #00000030, 0 16px 32px rgba(0, 0, 0, 0.33);
-  background-color: #0c0c0cd1;
+  box-shadow: 0 .5px .5px #ffffff29 inset,0 0 0 1px #000000c4,0 41px 17px #00000008,0 23px 14px #0000001a,0 10px 10px #0000002b,0 3px 6px #00000030;
+  background-color: #0c0c0c;
+  background-color: #151516;
   padding: 0;
   max-width: calc(1000px - 32px);
   opacity: 1;
@@ -43,12 +43,16 @@
   height: 48px;
   width: 48px;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 .name {
   color: white;
   font-size: 16px;
   font-weight: 600;
+  background: linear-gradient(0deg, rgb(178, 175, 180) 30%, rgba(230,227,232,1) 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .rightContainer {
@@ -56,6 +60,7 @@
   align-items: center;
   gap: 8px;
   padding: 8px;
+  margin-left: auto;
 }
 
 .primaryButton {
@@ -77,14 +82,6 @@
   background: radial-gradient(100% 100% at 50% 100%, rgb(81, 0, 255) 0%, rgb(255, 0, 230) 100%), #231645;
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
   position: relative;
-}
-
-.primaryButton:after {
-  border-radius: 1000px;
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, transparent 0%, transparent 45%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
 }
 
 .primaryButton:hover {
@@ -121,7 +118,6 @@
   display: flex;
 align-items: center;
 gap: 12px;
-margin-right: auto;
 margin-left: 16px;
 }
 
@@ -133,4 +129,19 @@ margin-left: 16px;
 
 .centerContainer > a:hover {
   color: rgba(255, 255, 255, 0.75);
+}
+
+@media screen and (max-width: 1000px) {
+  .name {
+    display: none;
+  }
+  .centerContainer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .button {
+    display: none;
+  }
 }

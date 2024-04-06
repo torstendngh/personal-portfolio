@@ -11,12 +11,12 @@ const SkillsSection = () => {
           Skills
         </h1>
         <div className={styles.grid}>
-          <SkillTile title={"React"} icon={"react"}/>
-          <SkillTile title={"JavaScript"} icon={"javascript"}/>
-          <SkillTile title={"TypeScript"} icon={"typescript"}/>
-          <SkillTile title={"Figma"} icon={"figma"}/>
-          <SkillTile title={"CSS"} icon={"css"}/>
-          <SkillTile title={"HTML"} icon={"html"}/>
+          <SkillTile title={"React"} icon={"react"} color={"#61DAFB"}/>
+          <SkillTile title={"JavaScript"} icon={"javascript"} color={"#F7DF1E"}/>
+          <SkillTile title={"TypeScript"} icon={"typescript"} color={"#3178C6"}/>
+          <SkillTile title={"Figma"} icon={"figma"} color={"#F24E1E"}/>
+          <SkillTile title={"CSS"} icon={"css"} color={"#2965F1"}/>
+          <SkillTile title={"HTML"} icon={"html"} color={"#EF652A"}/>
         </div>
         <h2>Development</h2>
         <div className={styles.smallGrid}>

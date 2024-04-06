@@ -21,6 +21,11 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []); // Empty dependency array means this effect runs once on mount
 
+  const sendEmail = () => {
+    const email = 'torstendngh@gmail.com';
+    window.location.href = `mailto:${email}`;
+  };
+
   return (
     <div className={styles.container}>
       <nav
@@ -66,7 +71,7 @@ const Navbar = () => {
             <button className={styles.button}>
               <Icon icon={"linkedIn"} />
             </button>
-            <button className={styles.primaryButton}>
+            <button className={styles.primaryButton} onClick={() => sendEmail()}>
               <span>Contact</span>
             </button>
           </div>

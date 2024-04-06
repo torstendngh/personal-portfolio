@@ -7,6 +7,12 @@ import { motion } from "framer-motion";
 import profilePictureImage from "../../assets/images/profilePicture.jpeg";
 
 const Home = () => {
+
+  const sendEmail = () => {
+    const email = 'torstendngh@gmail.com';
+    window.location.href = `mailto:${email}`;
+  };
+
   return (
     <div className={styles.home}>
       <Navbar />
@@ -87,7 +93,7 @@ const Home = () => {
               torstendngh@gmail.com
             </motion.div>
           </div>
-          <button className={styles.primaryButton}>
+          <button className={styles.primaryButton} onClick={() => sendEmail()}>
             <span>Contact Me</span>
           </button>
         </div>

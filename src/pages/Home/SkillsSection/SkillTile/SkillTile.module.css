@@ -11,6 +11,15 @@
   flex-shrink: 0;
   box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05) inset, 0 .5px .5px #ffffff29 inset,0 0 0 1px #000000c4,0 41px 17px #00000008,0 23px 14px #0000001a,0 10px 10px #0000002b,0 3px 6px #00000030;
   gap: 16px;
+  position: relative;
+}
+
+.tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: radial-gradient(100% 100% at 0% 100%, var(--skillTile-color) 0%, transparent 75%), radial-gradient(100% 100% at 100% 100%, var(--skillTile-color) 0%, transparent 80%);
 }
 
 .tile svg {

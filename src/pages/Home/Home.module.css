@@ -40,11 +40,12 @@
   margin-bottom: 32px;
   letter-spacing: 10px;
   text-transform: uppercase;
-
   background: linear-gradient(0deg, rgba(206,179,224,1) 30%, rgba(230,227,232,1) 70%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center;
 }
+
 
 .heroSection span{
   font-size: 16px;
@@ -68,12 +69,10 @@
   display: flex;
   align-items: center;
   gap: 8px;
-
   padding: 8px;
   padding-right: 12px;
   border-radius: 100px;
   font-weight: 500;
-
 }
 
 .profilePicture {
@@ -104,14 +103,6 @@
   position: relative;
 }
 
-.primaryButton:after {
-  border-radius: 1000px;
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, transparent 0%, transparent 45%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
-}
-
 .primaryButton:hover {
   transform: scale(1.05);
   background: radial-gradient(100% 100% at 50% 100%, rgb(81, 0, 255) 0%, rgb(255, 44, 234) 100%), #231645;
@@ -129,4 +120,21 @@
   background: linear-gradient(0deg, rgb(216, 193, 231) 30%, rgb(240, 238, 241) 70%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .heroSection h1 {
+    font-size: 42px;
+    margin-bottom: 24px;
+  }
+  .heroSection h2 {
+    font-size: 16px;
+    margin-bottom: 24px;
+    letter-spacing: 5px;
+  }
+  .tagContainer {
+    flex-direction: column;
+    gap: 4px;
+  }
 }
